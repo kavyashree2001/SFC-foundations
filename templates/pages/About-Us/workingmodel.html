@@ -1,14 +1,15 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 
 <head>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SFC FOUNDATIONS | ABOUT-US | KNOW-SFC</title>
+    <title>SFC FOUNDATIONS | ABOUT-US | WORKING MODEL</title>
 
     <!-- favicon -->
-    <link rel="icon" type="image/png" href="../../images/logo-img - Copy.png" />
+    <link rel="icon" type="image/png" href="{% static "images/logo-img - Copy.png" %}" />
 
     <!-- aos css cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
@@ -22,8 +23,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
 
     <!-- custom css file link  -->
-    <link rel="stylesheet" href="../../css/About-Us/knowsfc.css">
-    <link rel="stylesheet" href="../../css/darkmode.css">
+    <link rel="stylesheet" href="{% static 'css/About-Us/workingmodel.css' %}">
+    <link rel="stylesheet" href="{% static 'css/darkmode.css' %}">
 
 
 
@@ -32,14 +33,14 @@
     <!-- header section start-->
 
     <header>
-        <a href="#" class="logo"><img src="../../images/logo-img.png" alt=""></a>
+        <a href="#" class="logo"><img src="{% static 'images/logo-img.png' %}" alt=""></a>
         <div id="menu-bar" class="fas fa-hamburger"></div>
         <nav class="navbar">
             <ul>
-                <li><a href="../../index.html">Home</a></li>
+                <li><a href="{% url 'index' %}">Home</a></li>
                 <li><a class="active" href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="../../pages/Join-Us/joinus.html">Join Us</a></li>
+                <li><a href="{% url 'joinus' %}">Join Us</a></li>
                 <li><a href="#events">Events</a></li>
                 <li><a href="#news">News</a></li>
                 <li><a href="#contact">Contact us</a></li>
@@ -51,7 +52,7 @@
     </header>
     <!-- header section ends -->
 
-    <img class="feed" src="../../images/feed.png">
+    <img class="feed" src="{% static 'images/feed.png' %}">
     <div class="counter">
         <p> 190</p>
     </div>
@@ -59,32 +60,43 @@
 
 
 
-    <!-- KNOW SFC Starts   -->
+    <!-- Working Model Starts   -->
 
     <section class="projects" id="about">
-        <h1 class="heading">KNOW SFC</h1>
-        <div class="row" id="knowsfc" data-aos="fade-right">
+        <h1 class="heading">WORKING MODEL</h1>
 
-            <div><img class="internimg" src="../../images/knowsfc.jpeg">
-            </div>
-
-            <div class="videotext1">
-                <p class="textp1">
-                    The SFC is a Youth NGO that has it’s roots in Tricity and Delhi. SFC inspires the younger generation
-                    to come forward to serve the Mother Earth by igniting a spark in them. SFC is established to launch
-                    and nurture activities and programs which will reach the most impecunious and vulnerable people from
-                    our community. The motive is that Youth is the beaming future of our country and they are the ONLY
-                    ones who can change trite plots into buoyant podiums.
-                    Hence our Projects are designed keeping in mind the barbaric surroundings of our Society. With the
-                    help of our stalwart Volunteers we are able to focus on capacity building activities rather than the
-                    traditional gap filling initiatives. SFC is an organization of dedicated and staunch amateurs who
-                    are dead set at uplifting the unfortunate lots in our society and sheltering our Country.
+        <div class="row" id="workingmodel" data-aos="fade-right">
+            <div>
+                <p class="textp1 videotext1">
+                    SFC is engaged in various Social and Community Development programs aimed for the benefit of Poor
+                    and Needy Women, Older People, Children of our society. Our objective is not only to eradicate
+                    illiteracy among weaker sections of the society but also to levy the foundation for Women
+                    Empowerment, Healthcare, Development and Human rights.
+                </p>
+                <p class="textp1 videotext1">
+                    Our core philosophy has its bedrock in Education as we believe, it is the only weapon which can
+                    change the World and the best way to make this Grand change is imparting education to the building
+                    block of our society i.e. Our Children, hence we ensure that each child gets access to these
+                    opportunities. However the complete eradication of illiteracy will happen only by educating the
+                    Women and Elder Folks, so we have devoted special Programs for them. Our Vision and Missions are
+                    fulfilled wholeheartedly by our utmost core values, and intense dedication and commitment of our
+                    Team.
+                </p>
+                <p class="textp1 videotext1">
+                    But as We all know, Vision alone is not enough, so combining it with it with venture, we have our
+                    two main projects- Gyan & Sampuran which are the foot of our Working Model. The education imparted
+                    to the lesser fortunate is covered under Project Gyan. And all the other crucial issues are dealt
+                    under Project Sampuran like visiting old age homes, or organizing donation drives or awareness
+                    campaigns. And to conquer huge development challenges, we have a colossal pool of Interns and
+                    Volunteers, who are pivotal members of our Foundation. When like-minded people come together with
+                    common aspirations great results can be achieved and SFC has become the platform of success due to
+                    such devoted people only.
                 </p>
             </div>
         </div>
     </section>
 
-    <!-- KNOW SFC Ends   -->
+    <!-- Working Model Ends   -->
 
 
 
@@ -140,7 +152,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
     <!-- custom js file link  -->
-    <script src="../../js/About-Us/knowsfc.js"></script>
+    <script src="{% static 'js/About-Us/workingmodel.js' %}"></script>
 
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 
@@ -163,13 +175,13 @@
             });
         });
     </script>
-    <script src="../../js/About-Us/knowsfc.js"></script>
-    <script src="js/jquery.counterup.min.js"></script>
+    <script src="{% static 'js/About-Us/workingmodel.js' %}"></script>
+    <script src="{% static 'js/jquery.counterup.min.js' %}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
     <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.js"
         integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-    <script src="../../js/darkmode.js"></script>
+    <script src="{% static 'js/darkmode.js' %}"></script>
 </body>
 
 </html>
